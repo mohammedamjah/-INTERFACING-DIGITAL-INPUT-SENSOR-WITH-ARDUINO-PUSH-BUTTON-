@@ -1,8 +1,8 @@
 ## INTERFACING DIGITAL INPUT SENSOR WITH ARDUINO PUSH BUTTON
-## DATE :
-## NAME :																			             
-## ROLLNUMBER :
-## DEPARTMENT 
+## DATE :26/02/2024
+## NAME :M.MOHAMMED AMJATH																			             
+## ROLLNUMBER :212221083009
+## DEPARTMENT :MECHANICAL ENGINEERING
 
 
 ## AIM:
@@ -61,13 +61,38 @@ FIGURE -03
 
 
 
-## PROGRAM 
+## PROGRAM int led=4;
+int pushbutton=3;
+void setup()
+{
+  pinMode(led, OUTPUT);
+  pinMode (pushbutton,INPUT);
+}
+
+void} loop()
+{
+  int pb;
+  pb=digitalRead(pushbutton);
+  if(pb==HIGH)
+	{
+  		digitalWrite(led, HIGH);
+  		delay(500); 
+  		digitalWrite(led, LOW);
+  		delay(500);
+	}
+	else
+	{
+  		delay(500);
+  		digitalWrite(led, LOW);
+	}
+}   
  
  
 
 
 
 
+[steering and suspension.docx](https://github.com/vasanthkumarch/-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/files/14406668/steering.and.suspension.docx)
 
 
 
@@ -79,7 +104,7 @@ FIGURE -03
 
 
 
-## OUTPUT OF SIMULATION :
+## OUTPUT OF SIMULATION :"C:\Users\amjath m\OneDrive\Pictures\Screenshots\Screenshot 2024-02-22 214116.png"
 
 [My image](username.github.com/repository/img/image.jpg)
 
