@@ -49,7 +49,8 @@ FIGURE-02
 
 
 
-## CIRCUIT DIAGRAM 
+## CIRCUIT DIAGRAM "C:\Users\amjath m\Downloads\Spectacular Rottis-Amur.pdf"![Screenshot 2024-02-26 193443](https://github.com/mohammedamjah/-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/assets/160887872/c57fb459-648d-456b-9601-ffb72da79d72)
+
 
 
 ![image](https://user-images.githubusercontent.com/36288975/163530437-87a0afbd-b3c9-44ad-b907-5de63486fb9d.png)
@@ -61,7 +62,34 @@ FIGURE -03
 
 
 
-## PROGRAM 
+## PROGRAM int led=4;
+int sensorpot;
+void setup()
+{
+  pinMode(led, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  sensorpot=analogRead(A0);
+  Serial.print("data=");
+  Serial.println(sensorpot);
+  delay(500);
+  if(sensorpot>500)
+  {
+    digitalWrite(led,HIGH);
+      delay(100);
+    digitalWrite(led,LOW);
+      delay(100);
+  }
+  else
+  {
+    digitalWrite(led,LOW);
+    delay(100);
+  }
+    
+}
  
  
 
